@@ -1,5 +1,5 @@
 <template>
-  <div class="card spellcard text-visible d-flex flex-row align-items-center gap-2 selectable"  @click="setActiveSpell()" data-bs-toggle="modal" data-bs-target="#spellModal">
+  <div class="card spellcard text-visible d-flex flex-row align-items-center gap-2 selectable elevation-3"  @click="setActiveSpell()" data-bs-toggle="modal" data-bs-target="#spellModal">
     <!-- <img :src="spell.icon[1]" v-if="spell.icon[1]">
     <img src="https://cdn-icons-png.flaticon.com/512/1669/1669398.png" alt="" v-else> -->
     <img :src="spell.icon" alt="" v-if="spell.icon">
@@ -34,8 +34,8 @@
               <h6>{{activeSpell.index}}</h6>
             </div>
           </div>
-          <div class="description mt-3">
-            <span v-for="d in activeSpell.desc">{{d}}</span>
+          <div class="description mt-3 d-flex flex-column">
+            <span class="my-3" v-for="d in activeSpell.desc">{{d}}</span>
           </div>
         </div>
         <div class="modal-footer">

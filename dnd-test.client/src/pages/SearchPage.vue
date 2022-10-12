@@ -1,7 +1,7 @@
 <template>
   <section class="search p-3">
     <section class="form-wrapper">
-        <form @submit.prevent="handleSubmit()" class="form">
+        <form @submit.prevent="handleSubmit()" class="form elevation-3">
           <div class="form-floating">
             <input type="text" class="form-control" id="floatingSearchInput" placeholder="Search Spells by Name" v-model="editable">
             <label for="floatingSearchInput">Search Spells by Name</label>
