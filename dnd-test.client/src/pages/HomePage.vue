@@ -76,6 +76,7 @@ export default {
 
 .home {
   height: 100vh;
+  overflow-y: auto;
 }
 
 @media (min-width: 768px) {
