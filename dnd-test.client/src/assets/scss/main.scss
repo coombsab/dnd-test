@@ -1,0 +1,46 @@
+@import "./_variables.scss";
+@import "bootstrap";
+@import "./_overrides.scss";
+@import "./utilities.scss";
+@import "./loaders.scss";
+
+body{
+  overscroll-behavior: none;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $body-bg;
+}
+
+main {
+  flex-grow: 1;
+  background-image: url("https://images.ctfassets.net/swt2dsco9mfe/22Xj1YPLa19KYGAOGcAhbb/014bde378bc8e710eb15fb7fc99e5d0c/1920x1080-terrain-wa.jpg?q=70&fit=thumb&w=1920&h=1080&fm=avif");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea,
+select {
+  &:not(:placeholder-shown) {
+    &:valid {
+      border: 1px solid $success;
+    }
+    &:invalid {
+      border: 1px solid $danger;
+    }
+  }
+}
+
+form:invalid button[type="submit"] {
+  filter: grayscale(1);
+  pointer-events: none;
+}

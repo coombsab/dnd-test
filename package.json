@@ -1,0 +1,16 @@
+
+  {
+    "name": "dnd-test",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "npm run setup:server",
+      "setup:app": "npm run setup:server && npm run setup:client",
+      "setup:client": "cd dnd-test.client && npm i",
+      "setup:server": "cd dnd-test && npm i",
+      "start": "node dnd-test/index.js"
+    },
+    "engines": {
+      "node": "^14.17.0"
+    }
+  }
+  
