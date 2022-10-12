@@ -1,10 +1,19 @@
 <template>
-  <section class="home d-flex flex-column flex-md-row justify-content-center align-items-center gap-5">
-    <router-link :to="{ name: 'Character' }" aria-label="Character Page">
+  <section class="home d-flex flex-column flex-md-wrap flex-md-row justify-content-center align-items-center gap-5">
+    <router-link :to="{ name: 'Characters' }" aria-label="Characters Page">
       <div class="character theme-card elevation-3">
         <div class="on-md-hover text-visible">
           <span class="popup-text">
-            Character
+            Characters
+          </span>
+        </div>
+      </div>
+    </router-link>
+    <router-link :to="{ name: 'Campaigns' }" aria-label="Campaigns Page">
+      <div class="campaign theme-card elevation-3">
+        <div class="on-md-hover text-visible">
+          <span class="popup-text">
+            Campaigns
           </span>
         </div>
       </div>
@@ -41,6 +50,10 @@ export default {
 
 .character {
   background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ecd743aa-b751-48c0-86bc-d33576fe5f20/da56uy1-0a40770b-0069-4a78-a8f3-5ec3ab0ed6e5.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VjZDc0M2FhLWI3NTEtNDhjMC04NmJjLWQzMzU3NmZlNWYyMFwvZGE1NnV5MS0wYTQwNzcwYi0wMDY5LTRhNzgtYThmMy01ZWMzYWIwZWQ2ZTUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.vSYFC1TEi0LnjOk7Sc_MzZxGRmKen3PmFIMCOr6Q-jQ");
+}
+
+.campaign {
+  background-image: url("https://i.pinimg.com/originals/8e/21/79/8e2179f19baa714f8f8fb6b0e48ae651.jpg");
 }
 
 .theme-card {
