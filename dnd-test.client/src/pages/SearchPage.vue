@@ -1,5 +1,5 @@
 <template>
-  <section class="about p-3">
+  <section class="search p-3">
     <section class="form-wrapper">
         <form @submit.prevent="handleSubmit()" class="form">
           <div class="form-floating">
