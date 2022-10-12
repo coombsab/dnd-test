@@ -44,3 +44,10 @@ form:invalid button[type="submit"] {
   filter: grayscale(1);
   pointer-events: none;
 }
+
+.text-visible {
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.644), 0px 0px 10px rgba(48, 27, 237, 0.799);
+  color: rgb(89, 243, 225);
+  font-weight: 700;
+  letter-spacing: 0.035rem;
+}

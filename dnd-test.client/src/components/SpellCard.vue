@@ -8,8 +8,8 @@
   </div>
 
   <div class="modal fade" id="spellModal" tabindex="-1" aria-labelledby="spellModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content parchment-bg py-4 py-md-0 px-md-5">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="spellModalLabel">{{activeSpell?.name}}</h1>
           <div class="d-flex flex-wrap gap-3 align-items-center flex-grow-1 justify-content-around">
@@ -39,7 +39,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -92,7 +92,7 @@ export default {
 
   .description {
     overflow-y: auto;
-    max-height: 45vh;
+    height: 45vh;
   }
 
   .spellcard {
@@ -102,12 +102,13 @@ export default {
     padding: 0.5rem 0.75rem;
   }
 
-  .text-visible {
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.644), 0px 0px 10px rgba(48, 27, 237, 0.799);
-    color: rgb(89, 243, 225);
-    font-weight: 700;
-    letter-spacing: 0.035rem;
+  .parchment-bg {
+    background-image: url("../assets/img/parchment.png");
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
   }
+ 
 
   #spellModal {
     right: 50%;
