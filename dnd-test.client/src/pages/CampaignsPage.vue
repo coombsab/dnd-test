@@ -1,7 +1,7 @@
 <template>
   <div class="campaigns-page text-visible p-4">
     <!-- ADD CAMPAIGN BUTTON -->
-    <button class="btn text-visible create-button" type="button" data-bs-toggle="modal" data-bs-target="#campaignModal">
+    <button class="btn text-visible create-button elevation-2" type="button" data-bs-toggle="modal" data-bs-target="#campaignModal">
       Create Campaign
     </button>
     <!-- MY CAMPAIGNS -->
