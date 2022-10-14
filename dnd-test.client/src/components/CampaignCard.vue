@@ -1,7 +1,7 @@
 <template>
   <router-link :to="{ name: 'CampaignDetails', params: { campaignId: campaign.id } }">
-  <div class="rounded-3 theme-card my-4 elevation-3" :style="{ backgroundImage: `url(${campaign.coverImg})` }">
-    <div class="muted-layer rounded-3 ">
+    <div class="rounded-3 theme-card my-4 elevation-3" :style="{ backgroundImage: `url(${campaign.coverImg})` }">
+      <div class="muted-layer rounded-3 ">
         <i v-if="account.id == campaign.creatorId" class="mdi mdi-delete selectable rounded fs-6 delete-icon on-hover text-visible" @click.stop="removeCampaign(campaign.id)"></i>
         <div class="card-content d-flex flex-column flex-wrap justify-content-around text-center color-shift">
           <span class="pb-5 fs-4 text-visible">{{ campaign.name }}</span>
