@@ -19,10 +19,10 @@
           <img
             :src="account.picture || user.picture"
             alt="account photo"
-            height="40"
-            class="rounded"
+            class="account-photo"
+            :title="account.name || user.name"
           />
-          <span class="mx-3 text-success lighten-30">{{ account.name || user.name }}</span>
+          <!-- <span class="mx-3 text-success lighten-30">{{ account.name || user.name }}</span> -->
         </div>
       </div>
       <div class="dropdown-menu p-0 list-group w-100" aria-labelledby="authDropdown">
@@ -74,5 +74,11 @@ export default {
 
 .hoverable {
   cursor: pointer;
+}
+
+.account-photo {
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
 }
 </style>
