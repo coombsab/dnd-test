@@ -18,7 +18,7 @@
           </div>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body d-flex flex-column flex-wrap" v-if="activeSpell">
+        <div class="modal-body d-flex flex-column flex-wrap mb-5" v-if="activeSpell">
           <div class="d-flex flex-wrap gap-5">
             <div>
               <h6>Classes</h6>
@@ -38,9 +38,9 @@
             <span class="my-3" v-for="d in activeSpell.desc">{{d}}</span>
           </div>
         </div>
-        <div class="modal-footer">
+        <!-- <div class="modal-footer">
           <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

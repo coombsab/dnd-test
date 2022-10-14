@@ -37,6 +37,11 @@ const routes = [
     component: loadPage("AboutPage"),
   },
   {
+    path: "/test",
+    name: "Test",
+    component: loadPage("TestPage"),
+  },
+  {
     path: '/account',
     name: 'Account',
     component: loadPage('AccountPage'),

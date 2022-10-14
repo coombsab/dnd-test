@@ -129,8 +129,8 @@ export default {
 
   .create-button {
     position: absolute;
-    right: 4%;
-    top: 1%;
+    right: 1.5rem;
+    top: 2rem;
     // border-color: rgb(96, 190, 234);
     background-color: rgba(0, 0, 0, 0.639);
   }

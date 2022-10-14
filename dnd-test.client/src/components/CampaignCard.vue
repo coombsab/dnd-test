@@ -4,7 +4,7 @@
     <div class="muted-layer rounded-3 ">
         <i v-if="account.id == campaign.creatorId" class="mdi mdi-delete selectable rounded fs-6 delete-icon on-hover" @click.stop="removeCampaign(campaign.id)"></i>
         <div class="card-content d-flex flex-column flex-wrap justify-content-around text-center color-shift">
-          <span class="pb-5 fs-3 text-visible">{{ campaign.name }}</span>
+          <span class="pb-5 fs-4 text-visible">{{ campaign.name }}</span>
           <span class="flex-grow-1 mt-5 desc fs-6" :class="campaign.desc.length > 120 ? 'text-truncate' : ''">{{ campaign.desc }}</span>
           <span class="" v-if="campaign.desc.length > 120"><em>Truncated desc as it was too long (> 120 chars)</em></span>
         </div>
@@ -54,14 +54,16 @@ export default {
     background-size: cover;
     background-position: center;
     background-color: black;
-    height: 40vh;
-    width: 20vw;
+    height: 30rem;
+    width: 22rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: 150ms linear;
+    margin-right: 2rem;
+    margin-left: 2rem;
   }
   
   .muted-layer {
