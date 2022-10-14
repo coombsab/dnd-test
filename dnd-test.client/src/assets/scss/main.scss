@@ -51,3 +51,10 @@ form:invalid button[type="submit"] {
   font-weight: 700;
   letter-spacing: 0.035rem;
 }
+
+.text-visible:hover {
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.644), 0px 0px 5px rgba(189, 234, 30, 0.678);
+  color: rgb(96, 190, 234);
+  font-weight: 700;
+  letter-spacing: 0.035rem;
+}

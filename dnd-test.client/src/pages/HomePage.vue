@@ -67,6 +67,11 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: 150ms linear; 
+}
+
+.theme-card:hover {
+  transform: scale(1.1);
 }
 
 .popup-text {

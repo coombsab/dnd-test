@@ -100,6 +100,11 @@ export default {
     border-radius: 0.5rem;
     margin: 0.4rem;
     padding: 0.5rem 0.75rem;
+    translate: 150ms linear;
+  }
+
+  .spellcard:hover {
+    transform: scale(1.15);
   }
 
   .parchment-bg {

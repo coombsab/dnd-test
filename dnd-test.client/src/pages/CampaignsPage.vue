@@ -1,19 +1,23 @@
 <template>
-  <div class="campaigns-page text-danger">
+  <div class="campaigns-page text-visible p-4">
     <!-- ADD CAMPAIGN BUTTON -->
-    <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#campaignModal">
+    <button class="btn text-visible create-button" type="button" data-bs-toggle="modal" data-bs-target="#campaignModal">
       Create Campaign
     </button>
     <!-- MY CAMPAIGNS -->
-    <div class="border-bottom border-3 border-danger my-3 mb-4">
+    <div class="border-bottom border-3 border-color my-3 mb-4" v-if="userCampaigns.length > 0">
       <h3>My Campaigns</h3>
     </div>
-    <CampaignCard v-for="c in userCampaigns" :key="c.id" :campaign="c" />
+    <div class="d-flex flex-wrap justify-content-around">
+      <CampaignCard v-for="c in userCampaigns" :key="c.id" :campaign="c" />
+    </div>
     <!-- ALL CAMPAIGNS -->
-    <div class="border-bottom border-3 border-danger my-3">
+    <div class="border-bottom border-3 border-color my-3">
       <h3>All Campaigns</h3>
     </div>
-    <CampaignCard v-for="c in campaigns" :key="c.id" :campaign="c" />
+    <div class="d-flex flex-wrap justify-content-around">
+      <CampaignCard v-for="c in campaigns" :key="c.id" :campaign="c" />
+    </div>
   </div>
   <!-- MODAL close this if its driving you crazy -->
   <div class="modal fade" id="campaignModal" tabindex="-1" aria-labelledby="campaignModalLabel" aria-hidden="true">
@@ -26,19 +30,21 @@
         <div class="modal-body">
           <form action="submit" class="card" @submit.prevent="addCampaign()">
             <div class="card-body text-start">
-              <div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" v-model="editable.name" required name="name" placeholder="Name:" maxlength="50"/>
                 <label for="name">Name:</label>
-                <input type="text" class="form-control" v-model="editable.name" required name="name" />
               </div>
-              <div>
+              <div class="form-floating mb-3">
+                <input type="url" class="form-control" v-model="editable.coverImg" required name="coverImg" placeholder="coverImg" maxlength="10000"/>
                 <label for="coverImg">Cover Image:</label>
-                <input type="url" class="form-control" v-model="editable.coverImg" required name="coverImg"
-                  placeholder="coverImg" />
               </div>
-              <div>
+              <div class="form-floating">
+                <textarea class="form-control textarea-height" v-model="editable.desc" name="description" style="resize: none" placeholder="Descripotion:" maxlength="500"></textarea>
                 <label for="description">Description:</label>
-                <textarea type="text" class="form-control" v-model="editable.desc" name="description" rows="8"
-                  style="resize: none"></textarea>
+              </div>
+              <div class="text-end">
+                <span>{{editable.desc ? editable.desc.length : 0}}</span>
+                <span>/ 500</span>
               </div>
             </div>
             <div class="modal-footer">
@@ -109,5 +115,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .border-color {
+    border-color: rgb(96, 190, 234) !important;
+  }
 
+  .textarea-height {
+    height: 10.8rem;
+  }
+
+  .campaigns-page {
+    position: relative;
+  }
+
+  .create-button {
+    position: absolute;
+    right: 4%;
+    top: 1%;
+    // border-color: rgb(96, 190, 234);
+    background-color: rgba(0, 0, 0, 0.639);
+  }
+
+  .create-button:hover {
+    background-color: rgba(0, 0, 0, 0.804);
+  }
 </style>
