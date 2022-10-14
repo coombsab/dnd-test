@@ -27,6 +27,16 @@ const routes = [
     component: loadPage('CampaignsPage')
   },
   {
+    path: "/campaigns/:campaignId",
+    name: "CampaignDetails",
+    component: loadPage("CampaignDetailsPage"),
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: loadPage("AboutPage"),
+  },
+  {
     path: '/account',
     name: 'Account',
     component: loadPage('AccountPage'),

@@ -1,16 +1,16 @@
 import { AppState } from "../AppState.js"
-import { dnd } from "./AxiosService.js"
+import { dndApi } from "./AxiosService.js"
 
 class SpellsService {
   async getSpells(params) {
     AppState.spells = []
-    const res = await dnd.get("api/spells", {params})
+    const res = await dndApi.get("api/spells", {params})
     AppState.spells = res.data.results
   }
 
   async getSpellByURL(url) {
     AppState.activeSpell = null
-    const res = await dnd.get(url)
+    const res = await dndApi.get(url)
     AppState.activeSpell = res.data
   }
 
